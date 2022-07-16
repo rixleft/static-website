@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 800px;
+  font-size: 18px;
+  font-family: 'KaiTi';
+  background: url(./1.jpg) no-repeat center top;
+  background-size: 100% 100%;
+}
+
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
