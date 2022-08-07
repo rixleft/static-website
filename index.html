@@ -98,11 +98,19 @@
       };
     };
 
-    //实现点击保存将文字保留在页面上  未实现
+    //实现点击保存将文字保留在页面上 已解决
     var para = document.querySelector('header article p');
     var btn = document.querySelector('header article div');
+    paragraph();
     btn.onclick = function () {
-      console.log(para.innerHTML);
+      let context = JSON.stringify(para.innerHTML);
+      localStorage.setItem('para', context);
+      paragraph();
+
+    }
+    function paragraph() {
+      let info = localStorage.getItem('para');
+      para.innerHTML = JSON.parse(info);
     }
 
     //实现点击搜索框时跳转到必应
@@ -115,12 +123,6 @@
 
       }
     }
- document.addEventListener('keyup', function (e) {
-      if (e.keyCode === 83) {
-        searching.focus();
-      }
-    });
-
 
 
     // 实现点击导航栏弹出子菜单
